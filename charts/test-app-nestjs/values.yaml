@@ -40,6 +40,11 @@ service:
   type: NodePort
   port: 80
 
+container:
+  port: 8080
+  livenessPath: /ping   # "" to disable
+  readinessPath: /ping  # "" to disable
+
 ingress:
   enabled: false
   className: ""
